@@ -13,6 +13,11 @@ Install `probe-run`
 ```
 cargo install probe-run
 ```
+If it fails on wsl, use 
+
+sudo apt install build-essential
+sudo apt install libudev-dev
+sudo apt install pkg-config
 
 ```
 rustup target add thumbv7em-none-eabihf
