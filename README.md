@@ -24,9 +24,14 @@ rustup target add thumbv7em-none-eabihf
 ```
 
 Add UDEV rules (to a new file in `/etc/udev/rules.d/`)
-
 ```
 ATTRS{idVendor}=="1366", ENV{ID_MM_DEVICE_IGNORE}="1", TAG+="uaccess"
+```
+you can do it by:
+
+```
+sudo touch /etc/udev/rules.d/nrf
+echo '"ATTRS{idVendor}=="1366", ENV{ID_MM_DEVICE_IGNORE}="1", TAG+="uaccess"' | sudo tee /etc/udev/rules.d/nrf
 ```
 
 Plug in the board and switch it on.
