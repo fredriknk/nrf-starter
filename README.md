@@ -31,7 +31,13 @@ you can do it by:
 
 ```
 sudo touch /etc/udev/rules.d/nrf
-echo '"ATTRS{idVendor}=="1366", ENV{ID_MM_DEVICE_IGNORE}="1", TAG+="uaccess"' | sudo tee /etc/udev/rules.d/nrf
+echo 'SUBSYSTEM=="usb", ATTR{idVendor}=="1366", ATTR{idProduct}=="1015", MODE="0666", TAG+="uaccess"' | sudo tee /etc/udev/rules.d/nrf
+
+sudo usermod -aG plugdev $USER
+newgrp plugdev
+
+sudo udevadm control --reload-rules
+sudo udevadm trigger
 ```
 
 Plug in the board and switch it on.
