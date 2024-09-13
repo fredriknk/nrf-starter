@@ -1,6 +1,12 @@
-# Getting started with the Nordic nRF52840 board in rust.
+# Getting started with the Nordic nRF52840 board in rust with WSL
 
 ## Linux Instalation instructions.
+
+In windows terminal Update wsl so you are absolultely sure it has USB access
+```
+wsl --update
+wsl --install Ubuntu-24.04
+```
 
 Install Rust (rustc, cargo, rustup)
 
