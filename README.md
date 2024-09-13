@@ -8,10 +8,10 @@ Install Rust (rustc, cargo, rustup)
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 
-Install `probe-run`
+Install `probe-rs`
 
 ```
-cargo install probe-run
+cargo install probe-rs
 ```
 If it fails on wsl, use 
 ```
