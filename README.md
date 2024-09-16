@@ -38,7 +38,7 @@ you can do it by:
 ```
 sudo touch /etc/udev/rules.d/nrf
 echo 'SUBSYSTEM=="usb", ATTR{idVendor}=="1366", ATTR{idProduct}=="1015", MODE="0666", TAG+="uaccess"' | sudo tee /etc/udev/rules.d/nrf
-
+echo 'SUBSYSTEM=="usb", ATTR{idVendor}=="1366", ATTR{idProduct}=="1055", MODE="0666", TAG+="uaccess"' | sudo tee /etc/udev/rules.d/nrf
 sudo usermod -aG plugdev $USER
 newgrp plugdev
 
